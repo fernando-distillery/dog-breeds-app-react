@@ -1,0 +1,41 @@
+header > h1 {
+  text-align: center;
+}
+
+.main-content {
+  margin-bottom: 72px;
+  /* padding-right: 72px; */
+}
+
+.select-breed {
+  width: 100%;
+  text-align: center;
+  margin: 36px 0;
+}
+
+footer {
+  background-color: burlywood;
+  bottom: 0;
+  color: white;
+  padding: 1em;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 90%;
+  padding: 5%;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__item {
+  width: fit-content;
+  height: 3em;
+}
