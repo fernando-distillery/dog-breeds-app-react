@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 import { DogFooter } from "./components/DogFooter";
 import { DogHeader } from "./components/DogHeader";
 import { DogList } from "./components/DogList";
@@ -16,8 +17,8 @@ export const DogApp = () => {
 
   return (
     <main>
-      <DogHeader />
       <div className="main-content">
+        <DogHeader />
         <p className="select-breed"> Select your favourite breed! </p>
         {breeds && (
           <DogList defaultSelected={breeds[0]}>

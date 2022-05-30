@@ -6,7 +6,10 @@ export const DogListItem = ({ children, value }) => {
 
   return (
     <button
-      onClick={() => toggleSelectedItem(value)}
+      onClick={(e) => {
+        e.preventDefault();
+        toggleSelectedItem(value);
+      }}
       id={`${value}-menu-item`}
       className={`menu__item ${selectedItem === value && "active"}`}
     >
