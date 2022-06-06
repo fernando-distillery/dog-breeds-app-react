@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
 import { DogFooter } from "./components/DogFooter";
 import { DogHeader } from "./components/DogHeader";
 import { DogList } from "./components/DogList";
 import { DogListItem } from "./components/DogListItem";
+import { getBreeds } from "./helpers/helpers";
 
 export const DogApp = () => {
   const [breeds, setBreeds] = useState([]);
 
+  const setBreedList = async () => {
+    const breedList = await getBreeds();
+    setBreeds(breedList);
+  };
+
   useEffect(() => {
-    fetch("https://dog.ceo/api/breeds/list/all")
-      .then((resp) => resp.json())
-      .then(({ message }) => setBreeds(Object.keys(message)))
-      .catch((err) => console.log(err));
+    setBreedList();
   }, []);
 
   return (
