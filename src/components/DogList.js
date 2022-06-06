@@ -6,15 +6,6 @@ export const DogContext = createContext();
 export const DogList = ({ children, defaultSelected }) => {
   const navigate = useNavigate();
 
-  const getBreedRandomImage = useCallback((breedName) => {
-    fetch(`https://dog.ceo/api/breed/${breedName}/images/random`)
-      .then((resp) => resp.json())
-      .then((data) => {
-        navigate(`/breeds/${breedName}`);
-      })
-      .catch((error) => console.error(error));
-  }, []);
-
   const [selectedItem, setSelectedItem] = useState(defaultSelected);
 
   const toggleSelectedItem = useCallback(
@@ -25,7 +16,7 @@ export const DogList = ({ children, defaultSelected }) => {
       setSelectedItem(item);
       navigate(`/breeds/${item}`);
     },
-    [selectedItem, setSelectedItem, getBreedRandomImage]
+    [selectedItem, setSelectedItem, navigate]
   );
 
   const value = useMemo(
