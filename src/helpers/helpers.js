@@ -12,8 +12,9 @@ export const getBreedRandomImage = async (breedName) => {
 
 export const getBreeds = async () => {
   try {
-    const response = fetch("https://dog.ceo/api/breeds/list/all");
+    const response = await fetch("https://dog.ceo/api/breeds/list/all");
     const { message } = await response.json();
+    console.log(Object.keys(message));
     return Object.keys(message);
   } catch (error) {
     console.error(error);
