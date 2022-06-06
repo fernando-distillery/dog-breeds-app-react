@@ -21,7 +21,11 @@ export const DogApp = () => {
     <main>
       <div className="main-content">
         <DogHeader />
-        <p className="select-breed"> Select your favourite breed! </p>
+        <p className="select-breed">
+          {" "}
+          Select your favourite breed and see a random image of that kind of
+          dog!{" "}
+        </p>
         {breeds && (
           <DogList defaultSelected={breeds[0]}>
             {breeds.map((breed) => (
