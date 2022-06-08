@@ -3,14 +3,7 @@ header > h1 {
 }
 
 .main-content {
-  margin-bottom: 3em;
-  min-height: 87.5vh;
-  height: fit-content;
-}
-
-.dark {
-  background-color: darkblue;
-  color: aliceblue;
+  margin-bottom: 72px;
 }
 
 .select-breed {
@@ -69,8 +62,6 @@ footer {
   flex-direction: column;
   gap: 24px;
   width: 100%;
-  min-height: 95vh;
-  height: fit-content;
 }
 
 .dog__img {
