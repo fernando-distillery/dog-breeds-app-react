@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { DogApp } from "./DogApp";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { DogScreen } from "./components/DogScreen";
 import { DogMain } from "./components/DogMain";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -11,7 +11,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ThemeProvider>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<DogApp />}>
           <Route path="main" element={<DogMain />} />
@@ -28,6 +28,6 @@ root.render(
           }
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </ThemeProvider>
 );
