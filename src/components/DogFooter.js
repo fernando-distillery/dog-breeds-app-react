@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../styles.css";
 
-export const DogFooter = () => {
-  const [year, setYear] = useState();
-
-  useEffect(() => {
-    setYear(new Date().getFullYear());
-  }, []);
-
+export const DogFooter = ({ year }) => {
   return (
     <footer>
       <span>Dogs App | Fernando Martinez &copy; {year}</span>

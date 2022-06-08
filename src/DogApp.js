@@ -1,42 +1,31 @@
 import React, { useEffect, useState } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 import { DogFooter } from "./components/DogFooter";
-import { DogHeader } from "./components/DogHeader";
-import { DogList } from "./components/DogList";
-import { DogListItem } from "./components/DogListItem";
 import { getBreeds } from "./helpers/helpers";
 
 export const DogApp = () => {
-  const [breeds, setBreeds] = useState([]);
+  const navigate = useNavigate();
 
-  const setBreedList = async () => {
-    const breedList = await getBreeds();
-    setBreeds(breedList);
-  };
+  const [breeds, setBreeds] = useState([]);
+  const [year, setYear] = useState();
 
   useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
+  useEffect(() => {
+    const setBreedList = async () => {
+      const breedList = await getBreeds();
+      setBreeds(breedList);
+    };
     setBreedList();
+    navigate("/main");
   }, []);
 
   return (
     <main>
-      <div className="main-content">
-        <DogHeader />
-        <p className="select-breed">
-          {" "}
-          Select your favourite breed and see a random image of that kind of
-          dog!{" "}
-        </p>
-        {breeds && (
-          <DogList defaultSelected={breeds[0]}>
-            {breeds.map((breed) => (
-              <DogListItem key={breed} value={breed}>
-                {breed}
-              </DogListItem>
-            ))}
-          </DogList>
-        )}
-      </div>
-      <DogFooter />
+      <Outlet context={[breeds]} />
+      <DogFooter year />
     </main>
   );
 };
