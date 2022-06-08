@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dog-breeds-app-react/static/css/main.59d81410.css",
+    "main.js": "/dog-breeds-app-react/static/js/main.fdc7a326.js",
+    "index.html": "/dog-breeds-app-react/index.html",
+    "main.59d81410.css.map": "/dog-breeds-app-react/static/css/main.59d81410.css.map",
+    "main.fdc7a326.js.map": "/dog-breeds-app-react/static/js/main.fdc7a326.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59d81410.css",
+    "static/js/main.fdc7a326.js"
+  ]
+}
