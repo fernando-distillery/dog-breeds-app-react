@@ -25,7 +25,7 @@ export const DogApp = () => {
   return (
     <main>
       <Outlet context={[breeds]} />
-      <DogFooter year />
+      <DogFooter year={year} />
     </main>
   );
 };
