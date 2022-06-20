@@ -21,7 +21,7 @@ export const DogApp = () => {
       setBreeds(breedList);
     };
     setBreedList();
-    navigate("/main");
+    navigate("/main", { replace: true });
   }, []);
 
   return (

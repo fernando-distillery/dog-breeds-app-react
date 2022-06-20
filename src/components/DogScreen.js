@@ -32,7 +32,7 @@ export const DogScreen = () => {
       <button
         className="back-button"
         onClick={() => {
-          navigate("/main");
+          navigate(-1);
         }}
       >
         <i
