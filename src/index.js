@@ -11,7 +11,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ThemeProvider>
-    <HashRouter>
+    <HashRouter hashType={"slash"}>
       <Routes>
         <Route path="/" element={<DogApp />}>
           <Route path="main" element={<DogMain />} />
