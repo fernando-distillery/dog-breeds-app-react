@@ -80,7 +80,7 @@ footer {
   height: 60vh;
 }
 
-.back-button {
+.action-button {
   background-color: brown;
   border-radius: 100%;
   border: none;
@@ -89,7 +89,7 @@ footer {
   margin: 24px;
 }
 
-.back-button:hover {
+.action-button:hover {
   filter: brightness(130%);
   cursor: pointer;
 }
