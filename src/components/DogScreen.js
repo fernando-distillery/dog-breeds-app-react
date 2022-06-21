@@ -29,18 +29,32 @@ export const DogScreen = () => {
           alt={`A dog whose breed is ${breedName}`}
         />
       )}
-      <button
-        className="back-button"
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        <i
-          className="fa fa-arrow-left"
-          aria-hidden="true"
-          style={{ fontSize: "24px" }}
-        ></i>
-      </button>
+      <div>
+        <button
+          className="action-button"
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          <i
+            className="fa fa-arrow-left"
+            aria-hidden="true"
+            style={{ fontSize: "24px" }}
+          ></i>
+        </button>
+        <button
+          className="action-button"
+          onClick={() => {
+            getBreedRandomImageUrl(breedName);
+          }}
+        >
+          <i
+            className="fa-solid fa-arrow-rotate-right"
+            aria-hidden="true"
+            style={{ fontSize: "24px" }}
+          ></i>
+        </button>
+      </div>
     </div>
   );
 };
